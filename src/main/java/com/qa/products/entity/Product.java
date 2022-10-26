@@ -28,7 +28,6 @@ public class Product {
 	@Id
 	@SequenceGenerator(name="mySeq", initialValue=1000, allocationSize = 1, sequenceName="productdb")
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator="mySeq")
-	//@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="product_id")
 	private int id;
 	

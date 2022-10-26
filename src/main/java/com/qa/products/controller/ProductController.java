@@ -30,7 +30,7 @@ import com.qa.products.service.ProductServiceImpl;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("/api/v1")
 public class ProductController {
 	@Autowired
 	ProductServiceImpl productService;

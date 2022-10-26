@@ -12,14 +12,16 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @SpringBootApplication
-@EnableWebMvc
+//@EnableWebMvc
 public class ProductMysqlApplication {
+	
 	
 	@Bean
 	public ModelMapper mapper() {
 		return new ModelMapper();
 	}
 
+	
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -28,6 +30,8 @@ public class ProductMysqlApplication {
 				.paths(PathSelectors.any())
 				.build();
 	}
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProductMysqlApplication.class, args);
 	}
